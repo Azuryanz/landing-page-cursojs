@@ -1,0 +1,163 @@
+:root {
+  --background-color-main: #2b2a33;
+  --background-color-sub: #1c1b22;
+  --highlight-color-main: #42414d;
+  --highlight-color-sub: #36353d;
+  --font-color-text: #ddd;
+  --font-color-smtext: #aaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color-main);
+  color: var(--font-color-text);
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 8rem;
+  margin-bottom: 5rem;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-bg {
+  background-image: url(../img/main-bg.svg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.plain-bg {
+  background-color: var(--background-color-main);
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.menu {
+  width: 100%;
+
+  background-color: var(--background-color-sub);
+  border-bottom: 1px solid var(--highlight-color-main);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu a {
+  color: var(--font-color-text);
+}
+
+.menu h1 {
+  font-size: 2.3rem;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--highlight-color-main);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  width: 50%;
+  left: 25%;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.intro-content-text {
+  flex: 1;
+}
+
+.intro-content-img {
+  flex: 1;
+}
+
+.intro-content-img img {
+  max-width: 100%;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.top-section p {
+  margin-bottom: 2rem;
+}
+
+.top-section-container {
+    max-width: 64rem;
+}
